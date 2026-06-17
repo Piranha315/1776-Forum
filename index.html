@@ -29,7 +29,12 @@
   } 
   ::selection{background:rgba(180,155,87,.28)}
   img, video {width: auto; height: auto; display: block; }
-  .media-fill img, .media-fill video { height: 100%; max-width: none; }
+  .media-fill img, .media-fill video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
+}
 
   .frame{max-width:1320px;margin:0 auto;border-left:3px double var(--gold);border-right:3px double var(--gold)}
   .wrap{max-width:980px;margin:0 auto;padding:0 32px}
