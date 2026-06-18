@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The 1776 Summit — Singh Capital Partners</title>
-<meta name="description" content="An evening convening private capital, state officials, and defense leaders across defense, space, AI, and energy. Hosted by Singh Capital Partners. Washington, DC — July 1, 2026.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23B49B57%22>★</text></svg>">
+<title>The 1776 Summit — An Evening on the Prospects of America</title>
+<meta name="description" content="Convening private capital, state officials, and defense leaders across defense, space, AI, and energy. July 1, 2026 — Washington, DC.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1776summit.org/">
+<meta property="og:title" content="The 1776 Summit">
+<meta property="og:description" content="An evening convening the builders of America's hard-power future. Hosted by Singh Capital Partners, Blumberg Capital, and Cedar Pine.">
+<meta property="og:image" content="https://1776summit.org/og-image.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://1776summit.org/">
+<meta property="twitter:title" content="The 1776 Summit">
+<meta property="twitter:description" content="An evening convening the builders of America's hard-power future. July 1, 2026.">
+<meta property="twitter:image" content="https://1776summit.org/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -152,10 +168,25 @@
   .field .opt{text-transform:none;letter-spacing:0;color:var(--ink-mute);font-style:italic}
   .form-card .btn.solid{width:100%;text-align:center;margin-top:6px}
   .form-note{font-family:var(--display);font-style:italic;font-size:14px;color:var(--ink-mute);margin-top:14px;text-align:center}
+  
   .thanks{display:none;border:1px solid var(--gold-light);background:var(--paper);padding:54px 30px;text-align:center}
   .thanks.show{display:block}
   .thanks h4{font-family:var(--display);font-style:italic;font-size:27px;color:var(--gold-text);margin:6px 0 12px}
   .thanks p{font-size:15px;color:var(--ink-soft);max-width:360px;margin:0 auto}
+
+  /* success animation */
+  @keyframes sealAppear {
+    0% { transform: scale(0.6) rotate(-10deg); opacity: 0; }
+    70% { transform: scale(1.08) rotate(3deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+  .success-seal {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 24px;
+    display: block;
+    animation: sealAppear 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
 
   /* our work */
   .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px}
@@ -180,8 +211,6 @@
   .firm-card--more{opacity:.55}
   .firm-name{font-family:var(--display);font-weight:600;font-size:15px;color:#E8DEBB;line-height:1.2}
   .firm-type{font-family:var(--display);font-style:italic;font-size:12.5px;color:#7A8BA8}
-  @media (max-width:900px){.firms-grid{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:480px){.firms-grid{grid-template-columns:1fr}}
 
   /* reveal */
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
@@ -208,6 +237,7 @@
     .work-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
     .nav{padding:14px 20px}
     .hero h1{font-size:clamp(32px,8vw,48px)}
+    .firms-grid{grid-template-columns:1fr}
   }
   @media (max-width:420px){
     .frontiers-grid{grid-template-columns:1fr}
@@ -250,7 +280,7 @@
 <div class="hero" id="top">
   <div class="media-fill">
     <img
-      src="imgs/WhiteHouse.jpg"
+      src="WhiteHouse.jpg"
       alt="The South Lawn of the White House with the American flag flying above the portico"
       class="duotone"
       loading="eager"
@@ -339,7 +369,7 @@
         <figure class="vignette" style="margin-bottom:18px">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="plate">
-            <img src="imgs/Defense.jpg" alt="A mobile interceptor missile battery loaded on a heavy tactical vehicle in a desert test range" class="duotone" loading="lazy">
+            <img src="Defense.jpg" alt="Defense" class="duotone" loading="lazy">
           </div>
         </figure>
         <h3>Defense</h3>
@@ -350,7 +380,7 @@
         <figure class="vignette" style="margin-bottom:18px">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="plate">
-            <img src="imgs/AI.jpg" alt="A corridor of illuminated server racks inside a high-density data center" loading="lazy">
+            <img src="AI.jpg" alt="AI" loading="lazy">
           </div>
         </figure>
         <h3>Artificial Intelligence</h3>
@@ -361,7 +391,7 @@
         <figure class="vignette" style="margin-bottom:18px">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="plate">
-            <img src="imgs/Energy.jpg" alt="A silhouetted oil pump jack against a sunset sky on the American plains" class="duotone" loading="lazy">
+            <img src="Energy.jpg" alt="Energy" class="duotone" loading="lazy">
           </div>
         </figure>
         <h3>Energy &amp; Industry</h3>
@@ -399,7 +429,7 @@
       <figure class="vignette">
         <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
         <div class="plate">
-          <img src="imgs/AI.jpg" alt="Artificial intelligence visualization representing the intersection of compute and power" class="duotone" loading="lazy">
+          <img src="AI.jpg" alt="AI Highlights" class="duotone" loading="lazy">
         </div>
         <figcaption>The fireside chat</figcaption>
       </figure>
@@ -411,7 +441,7 @@
     </div>
 
     <div class="center mt40 reveal">
-      <a class="btn" href="mailto:admin@singhcap.com?subject=Past%20events%20%E2%80%94%20The%201776%20Summit">Past events</a>
+      <a class="btn" href="/cdn-cgi/l/email-protection#5332373e3a3d13203a3d343b3032237d303c3e6c202631393630276e033220277661633625363d2720766163761661766b63766a67766163073b367661636264646576616300263e3e3a27">Past events</a>
     </div>
   </div>
 </section>
@@ -460,25 +490,25 @@
       <div class="rule"><span class="star">&#9733;</span></div>
       <h2 class="sec-title">Request an Invitation &amp; Nominate a Speaker</h2>
     </div>
-    <p class="speak-intro reveal">Attendance is by invitation only. Requests are reviewed by Singh Capital Partners. We welcome private capital, state officials, defense leaders, and operators building across the four frontiers. Know someone who belongs at the podium — or wish to speak yourself? Use the nomination form on the right.</p>
+    <p class="speak-intro reveal">Attendance is by invitation only. Requests are reviewed by Singh Capital Partners. We welcome private capital, state officials, defense leaders, and operators building across the four frontiers.</p>
 
     <div class="speak-grid">
 
-      <!-- ── LEFT: Invitation Request ── -->
+      <!-- LEFT: Invitation Request -->
       <div class="reveal">
-        <form class="form-card" id="speakForm" method="POST" target="speak_iframe" novalidate>
+        <form class="form-card" id="inviteForm">
           <span class="kicker">Invitation request</span>
           <div class="field">
-            <label for="sp-name">Name &amp; affiliation</label>
-            <input id="sp-name" data-key="name" type="text" autocomplete="organization" placeholder="Jane Adams, Meridian Dynamics" required>
+            <label>Name &amp; affiliation</label>
+            <input name="name" type="text" placeholder="Jane Adams, Meridian Dynamics" required>
           </div>
           <div class="field">
-            <label for="sp-email">Email</label>
-            <input id="sp-email" data-key="email" type="email" autocomplete="email" placeholder="jane@meridian.com" required>
+            <label>Email</label>
+            <input name="email" type="email" placeholder="jane@meridian.com" required>
           </div>
           <div class="field">
-            <label for="sp-field">Area of focus</label>
-            <select id="sp-field" data-key="field" required>
+            <label>Area of focus</label>
+            <select name="field" required>
               <option value="" disabled selected>Select an area&hellip;</option>
               <option>Space &amp; Aerospace</option>
               <option>Defense</option>
@@ -488,70 +518,63 @@
             </select>
           </div>
           <div class="field">
-            <label for="sp-remarks">Why you should attend</label>
-            <textarea id="sp-remarks" data-key="remarks" placeholder="One sentence on why you belong in the room" required></textarea>
-          </div>
-          <div class="field">
-            <label for="sp-links">Company or profile <span class="opt">(optional)</span></label>
-            <input id="sp-links" data-key="links" type="text" placeholder="Website, LinkedIn, or fund">
+            <label>Why you should attend</label>
+            <textarea name="remarks" placeholder="One sentence on why you belong in the room" required></textarea>
           </div>
           <button class="btn solid" type="submit">Request an invitation</button>
-          <p class="form-note">Reviewed by the host committee. Location shared upon acceptance.</p>
         </form>
-        <div class="thanks" id="speakThanks" role="status" aria-live="polite">
-          <div class="rule"><span class="star">&#9733;</span></div>
-          <h4>Your request is received</h4>
+        <div class="thanks" id="inviteThanks">
+          <svg class="success-seal" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="#B49B57" stroke-width="2"/>
+            <text x="50" y="65" text-anchor="middle" fill="#B49B57" font-size="40">★</text>
+          </svg>
+          <h4>Request received</h4>
           <p>Thank you. The host committee will be in touch. Location details are shared upon acceptance.</p>
         </div>
       </div>
 
-      <!-- ── RIGHT: Speaker Nomination ── -->
+      <!-- RIGHT: Speaker Nomination -->
       <div class="reveal">
-        <form class="form-card" id="nominateForm" method="POST" target="nominate_iframe" novalidate>
+        <form class="form-card" id="nominateForm">
           <span class="kicker">Nominate a speaker</span>
           <div class="field">
-            <label for="nm-type">I am nominating</label>
-            <select id="nm-type" data-nkey="type" required>
+            <label>I am nominating</label>
+            <select name="type" required>
               <option value="" disabled selected>Select&hellip;</option>
               <option>Myself</option>
               <option>Someone else</option>
             </select>
           </div>
           <div class="field">
-            <label for="nm-nominee">Nominee name &amp; affiliation</label>
-            <input id="nm-nominee" data-nkey="nominee" type="text" placeholder="Name and organization of the proposed speaker" required>
+            <label>Nominee name &amp; affiliation</label>
+            <input name="nominee" type="text" placeholder="Proposed speaker" required>
           </div>
           <div class="field">
-            <label for="nm-email">Contact email</label>
-            <input id="nm-email" data-nkey="email" type="email" autocomplete="email" placeholder="Best email to reach the nominee" required>
+            <label>Contact email</label>
+            <input name="email" type="email" placeholder="Best email for nominee" required>
           </div>
           <div class="field">
-            <label for="nm-topic">Proposed topic or area of expertise</label>
-            <input id="nm-topic" data-nkey="topic" type="text" placeholder="e.g. Autonomous systems &amp; deterrence" required>
+            <label>Proposed topic</label>
+            <input name="topic" type="text" placeholder="Area of expertise" required>
           </div>
           <div class="field">
-            <label for="nm-case">Why they should speak</label>
-            <textarea id="nm-case" data-nkey="case" placeholder="What perspective or experience makes this person essential to the conversation?" required></textarea>
-          </div>
-          <div class="field">
-            <label for="nm-links">Bio, profile, or prior talks <span class="opt">(optional)</span></label>
-            <input id="nm-links" data-nkey="links" type="text" placeholder="LinkedIn, website, or video link">
+            <label>Why they should speak</label>
+            <textarea name="case" placeholder="Essential perspective..." required></textarea>
           </div>
           <button class="btn solid" type="submit">Submit nomination</button>
-          <p class="form-note">All nominations reviewed by the program committee.</p>
         </form>
-        <div class="thanks" id="nominateThanks" role="status" aria-live="polite">
-          <div class="rule"><span class="star">&#9733;</span></div>
+        <div class="thanks" id="nominateThanks">
+          <svg class="success-seal" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="#B49B57" stroke-width="2"/>
+            <text x="50" y="65" text-anchor="middle" fill="#B49B57" font-size="40">★</text>
+          </svg>
           <h4>Nomination received</h4>
-          <p>Thank you. The program committee will review your submission and follow up if selected.</p>
+          <p>Thank you. The program committee will review your submission.</p>
         </div>
       </div>
 
-    </div><!-- /.speak-grid -->
+    </div>
   </div>
-
-  <iframe name="speak_iframe"   id="speak_iframe"   title="Form submission target"       style="display:none" tabindex="-1" aria-hidden="true"></iframe>
-  <iframe name="nominate_iframe" id="nominate_iframe" title="Nomination submission target" style="display:none" tabindex="-1" aria-hidden="true"></iframe>
 </section>
 
 <!-- ==================== OUR WORK ==================== -->
@@ -566,18 +589,9 @@
         <figure class="vignette">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="plate">
-            <svg viewBox="0 0 280 170" role="img" aria-label="Engraving of a neoclassical building facade">
+            <svg viewBox="0 0 280 170" role="img" aria-label="Convenings">
               <g fill="none" stroke="#C9B473" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M60 64 L140 36 L220 64 Z" fill="#16243E"/>
-                <line x1="56" y1="64" x2="224" y2="64"/>
-                <rect x="64" y="70" width="152" height="10" fill="#101B30"/>
-                <g fill="#0E1828" stroke="#C9B473" stroke-width="1.4">
-                  <rect x="74" y="80" width="13" height="56"/><rect x="100" y="80" width="13" height="56"/>
-                  <rect x="134" y="80" width="13" height="56"/><rect x="168" y="80" width="13" height="56"/>
-                  <rect x="193" y="80" width="13" height="56"/>
-                </g>
-                <rect x="56" y="136" width="168" height="12" fill="#101B30"/>
-                <line x1="44" y1="148" x2="236" y2="148" stroke-width="1.2" opacity=".5"/>
+                <path d="M60 64 L140 36 L220 64 Z" fill="#16243E"/><line x1="56" y1="64" x2="224" y2="64"/>
               </g>
             </svg>
           </div>
@@ -590,35 +604,10 @@
         <figure class="vignette">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="plate">
-            <svg viewBox="0 0 280 170" role="img" aria-label="Engraving of legislators touring a launch facility">
-              <g fill="none" stroke="#C9B473" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="152" y="34" width="8" height="100" fill="#101B30"/>
-                <rect x="160" y="34" width="44" height="8" fill="#101B30"/>
-                <rect x="160" y="58" width="32" height="7" fill="#101B30"/>
-                <rect x="160" y="82" width="24" height="7" fill="#101B30"/>
-                <line x1="156" y1="42" x2="204" y2="42" stroke-width="1.1"/>
-                <line x1="156" y1="65" x2="192" y2="65" stroke-width="1.1"/>
-                <line x1="156" y1="89" x2="184" y2="89" stroke-width="1.1"/>
+            <svg viewBox="0 0 280 170" role="img" aria-label="Delegations">
+               <g fill="none" stroke="#C9B473" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M136 134 L136 72 C136 58 148 52 148 52 C148 52 160 58 160 72 L160 134 Z" fill="#16243E"/>
-                <path d="M148 52 L148 40" stroke-width="1.4"/>
-                <path d="M136 120 L126 134 L138 128 M160 120 L170 134 L158 128" stroke-width="1.3"/>
-                <ellipse cx="148" cy="94" rx="5" ry="6" fill="#101B30"/>
-                <line x1="50" y1="134" x2="230" y2="134" stroke-width="1.2" opacity=".5"/>
-                <circle cx="68" cy="110" r="7" fill="#101B30"/>
-                <line x1="68" y1="117" x2="68" y2="134"/>
-                <path d="M58 125 L68 120 L78 125"/>
-                <circle cx="92" cy="108" r="7" fill="#101B30"/>
-                <line x1="92" y1="115" x2="92" y2="134"/>
-                <path d="M82 123 L92 118 L102 123"/>
-                <circle cx="116" cy="111" r="7" fill="#101B30"/>
-                <line x1="116" y1="118" x2="116" y2="134"/>
-                <path d="M106 126 L116 121 L126 126"/>
-              </g>
-              <g fill="#D8BE78">
-                <text x="72" y="38" font-size="11">&#9733;</text>
-                <text x="108" y="28" font-size="9">&#9733;</text>
-                <text x="200" y="24" font-size="13">&#9733;</text>
-              </g>
+               </g>
             </svg>
           </div>
         </figure>
@@ -630,16 +619,9 @@
         <figure class="vignette">
           <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
           <div class="plate">
-            <svg viewBox="0 0 280 170" role="img" aria-label="Engraving of a quill and a founding document">
+            <svg viewBox="0 0 280 170" role="img" aria-label="Dialogues">
               <g fill="none" stroke="#C9B473" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M96 44 L168 44 L168 132 L96 132 Z" fill="#16243E"/>
-                <g stroke-width="1.1" opacity=".7">
-                  <line x1="108" y1="62" x2="156" y2="62"/><line x1="108" y1="76" x2="156" y2="76"/>
-                  <line x1="108" y1="90" x2="140" y2="90"/>
-                </g>
-                <path d="M150 130 C 176 96 196 70 214 50 C 206 76 190 104 168 130 Z" fill="#101B30"/>
-                <line x1="158" y1="120" x2="178" y2="98" stroke-width="1"/>
-                <line x1="60" y1="148" x2="220" y2="148" stroke-width="1.2" opacity=".5"/>
               </g>
             </svg>
           </div>
@@ -656,169 +638,44 @@
   <div class="rule"><span class="star">&#9733;</span></div>
   <p style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text);margin-bottom:10px">Singh Capital Partners</p>
   <p class="reply">request the honor of your presence</p>
-  <a class="email" href="mailto:admin@singhcap.com">admin@singhcap.com</a>
+  <a class="email" href="/cdn-cgi/l/email-protection#0766636a6e6947746e69606f6466772964686a"><span class="__cf_email__" data-cfemail="6706030a0e0927140e09000f0406174904080a">[email&#160;protected]</span></a>
   <br>
   <a class="btn" href="#invite">Request an Invitation</a>
   <p class="legal">The 1776 Summit &middot; Singh Capital Partners &middot; MMXXVI</p>
 </footer>
 
-</div><!-- /.frame -->
+</div>
 
-<script>
-/* ============================================================
-   INVITATION REQUEST FORM → GOOGLE FORMS BACKEND
-   ------------------------------------------------------------
-   One-time setup (~5 minutes):
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+var BACKEND_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
-   1. Create a Google Form with these 5 questions IN ORDER:
-        1) Name & affiliation  (Short answer)
-        2) Email               (Short answer)
-        3) Field               (Short answer)
-        4) Why you should attend (Paragraph)
-        5) Relevant links      (Short answer)
-
-   2. Open the form ⋮ menu → "Get pre-filled link".
-      Fill dummy text in each field → "Get link" → copy it.
-      The URL will contain ?entry.NNN=... for each field.
-
-   3. Paste the form ID (between /d/e/ and /viewform) into
-      FORM_ID, and each entry.NNNN into entries below.
-
-   Until FORM_ID is filled the form safely falls back to email.
-   ============================================================ */
-var GOOGLE_FORM = {
-  formId: 'PASTE_FORM_ID_HERE',
-  entries: {
-    name:    'entry.0000000001',
-    email:   'entry.0000000002',
-    field:   'entry.0000000003',
-    remarks: 'entry.0000000004',
-    links:   'entry.0000000005'
-  },
-  fallbackEmail: 'admin@singhcap.com'
-};
-
-(function(){
-  var form   = document.getElementById('speakForm');
+function handleForm(formId, thanksId, type) {
+  const form = document.getElementById(formId);
   if(!form) return;
-  var thanks = document.getElementById('speakThanks');
-  var ready  = GOOGLE_FORM.formId.indexOf('PASTE') !== 0;
+  form.onsubmit = (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button');
+    btn.disabled = true; btn.innerText = 'Sending...';
 
-  if(ready){
-    form.action = 'https://docs.google.com/forms/d/e/' + GOOGLE_FORM.formId + '/formResponse';
-    [].forEach.call(form.querySelectorAll('[data-key]'), function(el){
-      var id = GOOGLE_FORM.entries[el.getAttribute('data-key')];
-      if(id) el.setAttribute('name', id);
+    const formData = new FormData(form);
+    formData.append('formType', type);
+
+    fetch(BACKEND_URL, { method: 'POST', body: new URLSearchParams(formData) })
+    .finally(() => {
+      form.style.display = 'none';
+      document.getElementById(thanksId).classList.add('show');
     });
-  }
-
-  function val(k){ var e=form.querySelector('[data-key="'+k+'"]'); return e?e.value.trim():''; }
-  function showThanks(){
-    form.style.display='none';
-    if(thanks){ thanks.classList.add('show'); thanks.scrollIntoView({behavior:'smooth',block:'center'}); }
-  }
-
-  form.addEventListener('submit', function(e){
-    if(!form.checkValidity()){ e.preventDefault(); form.reportValidity(); return; }
-    if(!ready){
-      e.preventDefault();
-      var body='Name and affiliation: '+val('name')+'\nEmail: '+val('email')+'\nArea of focus: '+val('field')+'\nWhy I should attend: '+val('remarks')+'\nRelevant links: '+val('links');
-      window.location.href='mailto:'+GOOGLE_FORM.fallbackEmail+'?subject='+encodeURIComponent('Invitation request — The 1776 Summit')+'&body='+encodeURIComponent(body);
-      return;
-    }
-    setTimeout(showThanks, 600);
-  });
-})();
-
-
-/* ============================================================
-   SPEAKER NOMINATION FORM → GOOGLE FORMS BACKEND
-   ------------------------------------------------------------
-   Your Form ID is pre-filled below from the link you provided.
-   You still need the individual entry IDs:
-
-   1. Open your Google Form →
-      https://docs.google.com/forms/d/e/1FAIpQLSddvcdVZNQ7mt9b-o-R1VqTejmmmQihUKb5N3cbc0sD4HaTgQ/viewform
-   2. Click ⋮ → "Get pre-filled link"
-   3. Fill dummy text in every field → "Get link" → copy the URL
-   4. The URL will contain ?entry.XXXXXXXXXX=dummy&entry.YYYYYY...
-      Replace each entry.XXXXXXXXXX placeholder below with the
-      real IDs that match the fields in your form, in order:
-        entry 1 → type      (Myself / Someone else)
-        entry 2 → nominee   (Nominee name & affiliation)
-        entry 3 → email     (Contact email)
-        entry 4 → topic     (Proposed topic)
-        entry 5 → case      (Why they should speak)
-        entry 6 → links     (Bio / profile / prior talks)
-
-   Until the entry IDs are filled the form falls back to email.
-   ============================================================ */
-var GOOGLE_NOMINATE_FORM = {
-  formId:  '1FAIpQLSddvcdVZNQ7mt9b-o-R1VqTejmmmQihUKb5N3cbc0sD4HaTgQ',
-  entries: {
-    type:    'entry.XXXXXXXXX1',   // ← replace with real entry IDs
-    nominee: 'entry.XXXXXXXXX2',
-    email:   'entry.XXXXXXXXX3',
-    topic:   'entry.XXXXXXXXX4',
-    case:    'entry.XXXXXXXXX5',
-    links:   'entry.XXXXXXXXX6'
-  },
-  fallbackEmail: 'admin@singhcap.com'
-};
-
-(function(){
-  var form   = document.getElementById('nominateForm');
-  if(!form) return;
-  var thanks = document.getElementById('nominateThanks');
-  var ready  = GOOGLE_NOMINATE_FORM.entries.type.indexOf('XXXXXXXXX') === -1;
-
-  if(ready){
-    form.action = 'https://docs.google.com/forms/d/e/' + GOOGLE_NOMINATE_FORM.formId + '/formResponse';
-    [].forEach.call(form.querySelectorAll('[data-nkey]'), function(el){
-      var id = GOOGLE_NOMINATE_FORM.entries[el.getAttribute('data-nkey')];
-      if(id) el.setAttribute('name', id);
-    });
-  }
-
-  function valN(k){ var e=form.querySelector('[data-nkey="'+k+'"]'); return e?e.value.trim():''; }
-  function showThanksN(){
-    form.style.display='none';
-    if(thanks){ thanks.classList.add('show'); thanks.scrollIntoView({behavior:'smooth',block:'center'}); }
-  }
-
-  form.addEventListener('submit', function(e){
-    if(!form.checkValidity()){ e.preventDefault(); form.reportValidity(); return; }
-    if(!ready){
-      e.preventDefault();
-      var body = 'Nominating: '+valN('type')
-               + '\nNominee name & affiliation: '+valN('nominee')
-               + '\nContact email: '+valN('email')
-               + '\nProposed topic: '+valN('topic')
-               + '\nWhy they should speak: '+valN('case')
-               + '\nBio / profile / links: '+valN('links');
-      window.location.href = 'mailto:'+GOOGLE_NOMINATE_FORM.fallbackEmail
-        + '?subject=' + encodeURIComponent('Speaker nomination — The 1776 Summit')
-        + '&body='    + encodeURIComponent(body);
-      return;
-    }
-    setTimeout(showThanksN, 600);
-  });
-})();
-
-
-/* ---------- reveal on scroll ---------- */
-var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-var items  = document.querySelectorAll('.reveal');
-if(reduce || !('IntersectionObserver' in window)){
-  [].forEach.call(items, function(el){ el.classList.add('in'); });
-} else {
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  },{threshold:0.13});
-  [].forEach.call(items, function(el){ io.observe(el); });
+  };
 }
+
+handleForm('inviteForm', 'inviteThanks', 'Invitation');
+handleForm('nominateForm', 'nominateThanks', 'Nomination');
+
+/* reveal on scroll */
+var io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0dc162348a3c5aa',t:'MTc4MTgwNDUwMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
