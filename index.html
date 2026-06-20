@@ -201,16 +201,19 @@
   footer .email:hover{color:var(--navy)}
   footer .legal{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#A79E82;margin-top:34px}
 
-  /* attending firms */
+  /* past attendees */
   #attendees .rule{margin:0 auto 20px}
   #attendees .rule::before{background:linear-gradient(90deg,transparent,var(--gold-light))}
   #attendees .rule::after{background:linear-gradient(90deg,var(--gold-light),transparent)}
   .firms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,180,115,.18);border:1px solid rgba(201,180,115,.18);margin-top:8px}
-  .firm-card{background:var(--navy-deep);padding:18px 16px;display:flex;flex-direction:column;gap:4px;transition:background .2s}
+  .firm-card{background:var(--navy-deep);padding:22px 16px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;transition:background .2s}
   .firm-card:hover{background:#16243E}
   .firm-card--more{opacity:.55}
-  .firm-name{font-family:var(--display);font-weight:600;font-size:15px;color:#E8DEBB;line-height:1.2}
-  .firm-type{font-family:var(--display);font-style:italic;font-size:12.5px;color:#7A8BA8}
+  .firm-logo-wrap{width:54px;height:54px;background:#fff;border-radius:4px;display:flex;align-items:center;justify-content:center;padding:6px;margin-bottom:10px;flex-shrink:0}
+  .firm-logo{width:42px;height:42px;object-fit:contain;display:block}
+  .firm-name{font-family:var(--display);font-weight:600;font-size:14px;color:#E8DEBB;line-height:1.2}
+  .firm-type{font-family:var(--display);font-style:italic;font-size:12px;color:#7A8BA8}
+  @media(max-width:600px){.firms-grid{grid-template-columns:repeat(2,1fr)}}
 
   /* reveal */
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
@@ -451,29 +454,86 @@
   <div class="wrap">
     <div class="head reveal">
       <div class="rule"><span class="star">&#9733;</span></div>
-      <h2 class="sec-title" style="color:var(--gold-light)">Attending Firms</h2>
+      <h2 class="sec-title" style="color:var(--gold-light)">Past Attendees</h2>
       <p style="font-family:var(--display);font-style:italic;font-size:17px;color:#9AA3B8;text-align:center;margin-top:10px;max-width:560px;margin-left:auto;margin-right:auto">A selection of the private capital, advisory, and defense organizations represented at the 1776 Summit.</p>
     </div>
     <div class="firms-grid reveal">
-      <div class="firm-card"><span class="firm-name">Squadra Ventures</span><span class="firm-type">National security &amp; cyber VC</span></div>
-      <div class="firm-card"><span class="firm-name">New North Ventures</span><span class="firm-type">National security innovation VC</span></div>
-      <div class="firm-card"><span class="firm-name">Medina Ventures</span><span class="firm-type">Defense technology VC</span></div>
-      <div class="firm-card"><span class="firm-name">Albion River</span><span class="firm-type">Defense products &amp; services PE</span></div>
-      <div class="firm-card"><span class="firm-name">Silicon Valley Defense Group</span><span class="firm-type">Defense technology nexus</span></div>
-      <div class="firm-card"><span class="firm-name">The Chertoff Group</span><span class="firm-type">National security advisory</span></div>
-      <div class="firm-card"><span class="firm-name">Fairmont Consulting Group</span><span class="firm-type">Aerospace &amp; defense advisory</span></div>
-      <div class="firm-card"><span class="firm-name">McNally Capital</span><span class="firm-type">Lower middle market PE</span></div>
-      <div class="firm-card"><span class="firm-name">Huizenga Capital Management</span><span class="firm-type">Multi-generational family office</span></div>
-      <div class="firm-card"><span class="firm-name">Upsher Management Company</span><span class="firm-type">Single family office — defense &amp; AI</span></div>
-      <div class="firm-card"><span class="firm-name">Washington Harbour Partners</span><span class="firm-type">Tech &amp; national security investments</span></div>
-      <div class="firm-card"><span class="firm-name">Meritage Group LP</span><span class="firm-type">Multi-asset investment management</span></div>
-      <div class="firm-card"><span class="firm-name">CFT Capital Partners</span><span class="firm-type">Cherng Family Trust family office</span></div>
-      <div class="firm-card"><span class="firm-name">SBB Research Group</span><span class="firm-type">Systematic investment management</span></div>
-      <div class="firm-card"><span class="firm-name">ElementUSA</span><span class="firm-type">Critical materials &amp; supply chain</span></div>
-      <div class="firm-card"><span class="firm-name">EOTECH</span><span class="firm-type">Defense optics manufacturing</span></div>
-      <div class="firm-card"><span class="firm-name">Standard Industrial Manufacturing</span><span class="firm-type">Defense industrial manufacturing</span></div>
-      <div class="firm-card"><span class="firm-name">The Global Connective</span><span class="firm-type">National security &amp; supply chain</span></div>
-      <div class="firm-card"><span class="firm-name">UBS Private Wealth</span><span class="firm-type">Ultra-high-net-worth wealth mgmt.</span></div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/squadra.vc" alt="Squadra Ventures" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Squadra Ventures</span><span class="firm-type">National security &amp; cyber VC</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/newnorthvc.com" alt="New North Ventures" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">New North Ventures</span><span class="firm-type">National security innovation VC</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/medinavc.com" alt="Medina Ventures" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Medina Ventures</span><span class="firm-type">Defense technology VC</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/albionriver.com" alt="Albion River" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Albion River</span><span class="firm-type">Defense products &amp; services PE</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/siliconvalleydefense.org" alt="Silicon Valley Defense Group" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Silicon Valley Defense Group</span><span class="firm-type">Defense technology nexus</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/chertoffgroup.com" alt="The Chertoff Group" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">The Chertoff Group</span><span class="firm-type">National security advisory</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/fairmontcg.com" alt="Fairmont Consulting Group" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Fairmont Consulting Group</span><span class="firm-type">Aerospace &amp; defense advisory</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/mcnallycapital.com" alt="McNally Capital" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">McNally Capital</span><span class="firm-type">Lower middle market PE</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/huizenga.capital" alt="Huizenga Capital Management" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Huizenga Capital Management</span><span class="firm-type">Multi-generational family office</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/upshermanagement.com" alt="Upsher Management Company" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Upsher Management Company</span><span class="firm-type">Single family office — defense &amp; AI</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/washingtonharbour.com" alt="Washington Harbour Partners" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Washington Harbour Partners</span><span class="firm-type">Tech &amp; national security investments</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/meritagegroup.com" alt="Meritage Group LP" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Meritage Group LP</span><span class="firm-type">Multi-asset investment management</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/cftcapitalpartners.com" alt="CFT Capital Partners" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">CFT Capital Partners</span><span class="firm-type">Cherng Family Trust family office</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/sbbrg.com" alt="SBB Research Group" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">SBB Research Group</span><span class="firm-type">Systematic investment management</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/elementusaminerals.com" alt="ElementUSA" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">ElementUSA</span><span class="firm-type">Critical materials &amp; supply chain</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/eotechinc.com" alt="EOTECH" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">EOTECH</span><span class="firm-type">Defense optics manufacturing</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/standardpumpparts.com" alt="Standard Industrial Manufacturing" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">Standard Industrial Manufacturing</span><span class="firm-type">Defense industrial manufacturing</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/gcc-us.org" alt="The Global Connective" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">The Global Connective</span><span class="firm-type">National security &amp; supply chain</span>
+      </div>
+      <div class="firm-card">
+        <div class="firm-logo-wrap"><img class="firm-logo" src="https://logo.clearbit.com/ubs.com" alt="UBS Private Wealth" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+        <span class="firm-name">UBS Private Wealth</span><span class="firm-type">Ultra-high-net-worth wealth mgmt.</span>
+      </div>
       <div class="firm-card firm-card--more"><span class="firm-name">And others</span><span class="firm-type">By invitation only</span></div>
     </div>
   </div>
