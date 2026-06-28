@@ -115,6 +115,19 @@ section+section{border-top:1px solid #E6DCC2}
 .frontier h3{font-family:var(--display);font-weight:600;font-size:21px;color:var(--navy);margin-bottom:6px}
 .frontier p{font-size:14.5px;color:var(--ink-mute);line-height:1.7;max-width:210px;margin:0 auto}
 
+/* schedule */
+.schedule-list{list-style:none;max-width:700px;margin:0 auto}
+.schedule-item{display:grid;grid-template-columns:148px 1fr;gap:0 28px;padding:22px 0;border-bottom:1px solid #E6DCC2}
+.schedule-item:last-child{border-bottom:none}
+.schedule-time{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:500;padding-top:4px;line-height:1.5}
+.schedule-detail strong{display:block;font-family:var(--display);font-weight:600;font-size:19px;color:var(--navy);margin-bottom:5px;line-height:1.15}
+.schedule-detail .schedule-speaker{display:block;font-size:14.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:2px}
+.schedule-detail .schedule-bio{display:block;font-family:var(--display);font-style:italic;font-size:13.5px;color:var(--ink-mute);margin-top:4px;line-height:1.5}
+@media(max-width:600px){
+  .schedule-item{grid-template-columns:1fr;gap:6px}
+  .schedule-time{font-size:10.5px}
+}
+
 /* highlights */
 .highlight{display:grid;grid-template-columns:360px 1fr;gap:46px;align-items:center;padding:38px 0}
 .highlight+.highlight{border-top:1px solid #E6DCC2}
