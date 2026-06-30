@@ -24,6 +24,21 @@ if (navToggle && navLinks) {
   });
 }
 
+/* profession "Other" toggle */
+function bindOtherProfession(selectId, inputId) {
+  var sel = document.getElementById(selectId);
+  var inp = document.getElementById(inputId);
+  if (!sel || !inp) return;
+  sel.addEventListener('change', function() {
+    var show = sel.value === 'Other';
+    inp.style.display = show ? 'block' : 'none';
+    inp.required = show;
+    if (!show) inp.value = '';
+  });
+}
+bindOtherProfession('inviteProfession',   'inviteOtherProfession');
+bindOtherProfession('nominateProfession', 'nominateOtherProfession');
+
 /* form submissions */
 function handleForm(formId, thanksId, type) {
   var form = document.getElementById(formId);
@@ -34,6 +49,10 @@ function handleForm(formId, thanksId, type) {
     btn.disabled = true;
     btn.innerText = 'Sending…';
     var formData = new FormData(form);
+    if (formData.get('profession') === 'Other') {
+      formData.set('profession', formData.get('professionOther') || 'Other');
+    }
+    formData.delete('professionOther');
     formData.append('formType', type);
     fetch(BACKEND_URL, {method: 'POST', body: new URLSearchParams(formData)})
       .finally(function() {
