@@ -1,5 +1,5 @@
 /* Paste the Apps Script deployment URL here (backend/Code.gs → Deploy → Web app URL) */
-var BACKEND_URL = 'https://script.google.com/u/0/home/projects/1AI8SGZpxzHllz5BPiaruM5PTW2SB0mqoRPFSilAtp4pg37Om-gO0TcL_/edit';
+var BACKEND_URL = 'https://script.google.com/macros/s/AKfycbwGUR6P2oXT_MXko2hfSQN1g1Vjp5d7yigt4FhrjYR6CRpd8S9xHsyoE7twfBup8cE/exec';
 
 /* wordmark: scroll to top without appending hash */
 document.querySelector('.wordmark').addEventListener('click', function(e) {
