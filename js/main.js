@@ -1,5 +1,5 @@
 /* Paste the Apps Script deployment URL here (backend/Code.gs → Deploy → Web app URL) */
-var BACKEND_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+var BACKEND_URL = 'https://script.google.com/u/0/home/projects/1AI8SGZpxzHllz5BPiaruM5PTW2SB0mqoRPFSilAtp4pg37Om-gO0TcL_/edit';
 
 /* wordmark: scroll to top without appending hash */
 document.querySelector('.wordmark').addEventListener('click', function(e) {
