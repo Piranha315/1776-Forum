@@ -1,3 +1,4 @@
+/* Paste the Apps Script deployment URL here (backend/Code.gs → Deploy → Web app URL) */
 var BACKEND_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
 
 /* wordmark: scroll to top without appending hash */
