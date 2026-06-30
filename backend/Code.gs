@@ -13,7 +13,7 @@
  * 5. Copy the deployment URL and set it as BACKEND_URL in js/main.js
  */
 
-var SPREADSHEET_ID    = 'YOUR_SPREADSHEET_ID_HERE';
+var SPREADSHEET_ID    = '1sjs-_kryvtOUYRxxqobsZpDvwliNWR4G5e4Ejqd_AhE';
 var NOTIFICATION_EMAIL = 'YOUR_EMAIL_HERE';  // set to '' to disable email alerts
 
 
@@ -59,7 +59,7 @@ function writeInvitation(ss, p, timestamp) {
     'Profession',
     'Email',
     'Area of Focus',
-    'Why Attend'
+    'LinkedIn'
   ]);
   sheet.appendRow([
     timestamp,
@@ -67,7 +67,7 @@ function writeInvitation(ss, p, timestamp) {
     p.profession || '',
     p.email      || '',
     p.field      || '',
-    p.remarks    || ''
+    p.linkedin   || ''
   ]);
 }
 
@@ -79,7 +79,7 @@ function writeNomination(ss, p, timestamp) {
     'Profession',
     'Contact Email',
     'Proposed Topic',
-    'Why They Should Speak'
+    'LinkedIn'
   ]);
   sheet.appendRow([
     timestamp,
@@ -87,7 +87,7 @@ function writeNomination(ss, p, timestamp) {
     p.profession || '',
     p.email      || '',
     p.topic      || '',
-    p.case       || ''
+    p.linkedin   || ''
   ]);
 }
 
@@ -104,7 +104,7 @@ function sendNotification(formType, p) {
       'Profession         : ' + (p.profession || '—') + '\n' +
       'Email              : ' + (p.email      || '—') + '\n' +
       'Area of Focus      : ' + (p.field      || '—') + '\n' +
-      'Why Attend         :\n' + (p.remarks   || '—');
+      'LinkedIn           : ' + (p.linkedin   || '—');
   } else {
     subject = '1776 Summit — New Speaker Nomination';
     body =
@@ -112,7 +112,7 @@ function sendNotification(formType, p) {
       'Profession         : ' + (p.profession || '—') + '\n' +
       'Contact Email      : ' + (p.email      || '—') + '\n' +
       'Proposed Topic     : ' + (p.topic      || '—') + '\n' +
-      'Why They Should Speak:\n' + (p.case    || '—');
+      'LinkedIn           : ' + (p.linkedin   || '—');
   }
 
   MailApp.sendEmail({
