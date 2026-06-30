@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://1776summit.org/">
 <meta property="og:title" content="The 1776 Summit">
-<meta property="og:description" content="An evening convening the builders of America's hard-power future. Hosted by Singh Capital Partners, Blumberg Capital, and Cedar Pine.">
+<meta property="og:description" content="A private evening for capital, public officials, and operators working in defense, space, AI, and energy.">
 <meta property="og:image" content="https://1776summit.org/og-image.jpg">
 
 <!-- Twitter -->
@@ -25,6 +25,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* Editorial/layout tune-up: a wider measure reduces awkward wrapping; subtle spacing gives copy more room without looking tracked-out. */
+:root { --copy-measure: min(92vw, 880px); }
+.wrap { max-width: min(94vw, 1180px); }
+.mission .wrap { max-width: var(--copy-measure); }
+.mission .dropcap, .speak-intro, .head p, .highlight p, .frontier p, .work-grid p {
+  max-width: 74ch;
+  line-height: 1.58;
+  letter-spacing: .006em;
+  word-spacing: .035em;
+}
+.hero-content { max-width: min(92vw, 980px); }
+.hero .lede { max-width: 760px; line-height: 1.48; word-spacing: .035em; }
+.sec-title { letter-spacing: .015em; }
+.tag, .meta, .details, .kicker, .eyebrow { letter-spacing: .095em; }
+.frontiers-grid, .work-grid { gap: clamp(24px, 3vw, 44px); }
+.highlight { gap: clamp(28px, 4vw, 56px); }
+@media (max-width: 720px) {
+  :root { --copy-measure: 92vw; }
+  .mission .dropcap, .speak-intro, .head p, .highlight p, .frontier p, .work-grid p { max-width: 100%; letter-spacing: normal; word-spacing: normal; }
+}
+</style>
 </head>
 <body>
 <div class="frame">
@@ -179,7 +202,7 @@
     <div class="head center reveal">
       <h2 class="sec-title">An evening of builders</h2>
     </div>
-    <p class="dropcap reveal">The 1776 Summit gathers the people building America's hard-power future — private capital, government officials, and leaders across space, defense, artificial intelligence, and energy — for one evening of candid conversation. It is convened by Singh Capital Partners.</p>
+    <p class="dropcap reveal">The 1776 Summit brings private capital, government officials, and operating leaders in space, defense, artificial intelligence, and energy into the same room for a private evening of candid discussion.</p>
   </div>
 </section>
 
@@ -200,7 +223,7 @@
           </div>
         </figure>
         <h3>Space &amp; Aerospace</h3>
-        <p>From launch to orbit, the contest for the high frontier.</p>
+        <p>Launch, orbital infrastructure, and the next phase of aerospace competition.</p>
       </div>
 
       <div class="frontier reveal">
@@ -211,7 +234,7 @@
           </div>
         </figure>
         <h3>Defense</h3>
-        <p>Rebuilding deterrence and the arsenal of democracy.</p>
+        <p>Deterrence, production capacity, and the technologies reshaping the defense base.</p>
       </div>
 
       <div class="frontier reveal">
@@ -222,7 +245,7 @@
           </div>
         </figure>
         <h3>Artificial Intelligence</h3>
-        <p>Intelligence as the nation's newest infrastructure.</p>
+        <p>Compute, software, and intelligence systems with strategic consequences.</p>
       </div>
 
       <div class="frontier reveal">
@@ -233,7 +256,7 @@
           </div>
         </figure>
         <h3>Energy &amp; Industry</h3>
-        <p>Abundant power and the means to build at scale.</p>
+        <p>Power, permitting, and the industrial capacity needed to build at scale.</p>
       </div>
 
     </div>
@@ -258,7 +281,7 @@
       <div>
         <span class="tag">The fireside chat &middot; Defense &middot; Space &middot; AI &middot; Energy</span>
         <h3>Rearming the arsenal of democracy</h3>
-        <p>Leaders in autonomous systems, shipbuilding, and munitions production on how software-defined manufacturing can restore American deterrence — and what acquisition reform must deliver for private capital to build at scale.</p>
+        <p>A discussion with leaders in autonomous systems, shipbuilding, and munitions production on manufacturing capacity, acquisition reform, and where private capital can help rebuild deterrence.</p>
       </div>
     </div>
 
@@ -273,7 +296,7 @@
       <div>
         <span class="tag">Energy &middot; Artificial intelligence</span>
         <h3>Gigawatts for intelligence</h3>
-        <p>Energy executives and AI lab founders on the collision between compute demand and grid capacity — from next-generation nuclear to the permitting reforms standing between America and abundance.</p>
+        <p>Energy executives and AI founders on compute demand, grid capacity, next-generation nuclear, and the permitting changes needed to keep pace.</p>
       </div>
     </div>
 
@@ -516,7 +539,7 @@
           </div>
         </figure>
         <h3>Private convenings</h3>
-        <p>Dinners and salons gathering capital and statecraft under the Chatham House rule.</p>
+        <p>Private dinners and salons for investors, operators, and public-sector leaders, generally held under the Chatham House rule.</p>
       </article>
 
       <article class="reveal">
@@ -542,7 +565,7 @@
           </div>
         </figure>
         <h3>Frontier delegations</h3>
-        <p>Visits connecting allocators and lawmakers with shipyards, launch sites, fabs, and reactors.</p>
+        <p>Site visits that bring allocators and public officials to shipyards, launch sites, fabs, reactors, and other critical facilities.</p>
       </article>
 
       <article class="reveal">
@@ -567,7 +590,7 @@
           </div>
         </figure>
         <h3>Published dialogues</h3>
-        <p>Public conversations with the leading voices of America's industrial renewal.</p>
+        <p>Published conversations with executives, investors, and public officials working on American industrial capacity.</p>
       </article>
     </div>
   </div>
@@ -585,5 +608,6 @@
 </div>
 
 <script src="js/main.js"></script>
+
 </body>
 </html>
